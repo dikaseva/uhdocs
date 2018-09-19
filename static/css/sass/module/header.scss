@@ -1,0 +1,119 @@
+/*header*/
+.sidebar{
+    width:240px;
+    height:100%;
+    background:$c-0;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:98989;
+    @include box-shadow(0 0 30px rgba(black, .1));
+}
+
+.sidebar-wrap{
+    height:100%;
+    position: relative;
+    overflow-x:hidden;
+    padding:$margin $margin;
+}
+
+@media all and (max-width:$screen-m){
+    .sidebar{
+        @include transition(all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0));
+        @include transform-translateX(-240px);
+        &.is-active{
+            @include transform-translateX(0px);
+        }
+    }
+    .menu-toggle{
+        width:40px;
+        height:40px;
+        //border:solid 2px red;
+        position:fixed;
+        right:-50px;
+        top:$margin-m;
+        z-index:8819;
+        span{
+            display:block;
+            width:80%;
+            height:2px;
+            background:$c-7;
+            margin:auto;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            position: absolute;
+            @include transition(all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0));
+            &::before, &::after{
+                display:block;
+                content:'';
+                width:100%;
+                height:2px;
+                background:$c-7;
+                position: absolute;
+                @include transition(all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0));
+            }
+            &::before{
+                @include transform-translateY(-10px);
+            }
+            &::after{
+                @include transform-translateY(10px);
+            }
+            &.is-active{
+                background:transparent;
+                &::before{
+                    @include transform-rotate(45deg);
+                }
+                &::after{
+                    @include transform-rotate(-45deg);
+                }
+            }
+        }
+        &:hover{
+            cursor:pointer;
+        }
+        
+    }
+}
+.logo{
+    width:100%;
+    height:60px;
+    padding:$margin 0;
+}
+.menu-label{
+    margin:$margin 0 $margin-m 0;
+    padding:0;
+    font-weight:700;
+    i{
+        margin-right:$margin/4;
+    }
+}
+.menu{
+    margin:0;
+    list-style-type:none;
+    padding:0;
+    li{
+        margin:0;
+        padding:0;
+    }
+    a{
+        text-decoration:none;
+        color:$c-7;
+        display:block;
+        width:100%;
+        line-height:40px;
+        padding:0 $margin;
+        @include border-radius($r);
+        &:hover{
+            color:$c-7;
+            background:rgba($c-10, .75);
+        }
+        &:active{
+            background-color:$c-10 - 10;
+        }
+        &.router-link-active{
+            background:$c-10;
+        }
+    }
+}

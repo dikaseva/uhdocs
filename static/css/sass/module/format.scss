@@ -1,0 +1,289 @@
+body{
+    font-family:$font-regular;
+    color:$c-7;
+    margin:0;
+    padding:0;
+    font-weight:400;
+    -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background:$c-10;
+}
+i, em{
+    font-style:italic;
+}
+b, strong{
+    font-weight:700;
+}
+main{
+    margin:0;
+}
+.outer {
+    width: 100%;
+    height: 100%;
+    display: table; }
+.middle {
+    display: table-cell;
+    vertical-align: middle; }
+
+.inner {
+    display: block;
+    text-align: center; }
+hr{
+    border:none;
+    width:100%;
+    height:1px;
+    background:$c-border;
+    margin:$margin 0;
+    padding:0;
+}
+
+figure{
+    img{
+        max-width:100%;
+    }
+}
+img{
+        max-width:100%;
+    }
+.content-m{
+    padding:$margin-m;
+}
+.content-hr{
+    padding:0 $margin;
+}
+.content-vr{
+    padding:$margin 0;
+}
+.content-hrm{
+    padding:0 $margin-m;
+}
+.content-vrm{
+    padding:$margin-m 0;
+}
+.container{
+    width:$screen-fit;
+    margin:0 auto;
+}
+.content-bordered,
+.content{
+    padding:$margin;
+}
+.section-white{
+    background:$c-0;
+    padding:$margin 0;
+}
+.section-grey{
+    background:$c-9;
+    padding:$margin 0;
+}
+strong{
+    font-weight:700;
+}
+p{
+    line-height:1.8em;
+}
+.link{
+    color:$c-link;
+    &:hover{
+        cursor:pointer;
+        color:$c-link - 30;
+    }
+    &:active{
+        color:$c-link - 60;
+    }
+}
+.text-xxl{
+    font-size:36px;
+}
+.text-xl{
+    font-size:24px;
+}
+.text-l{
+    font-size:18px;
+}
+.text-m{
+    font-size:16px;
+}
+.text-s{
+    font-size:13px;
+}
+.padd{
+    padding:$margin;
+}
+.padd-hr{
+    padding:0 $margin;
+}
+.padd-vr{
+    padding:$margin 0;
+}
+.padd-2x{
+    padding:$margin*2;
+}
+.padd-4x{
+    padding:$margin*4;
+}
+.padd-vr-2x{
+    padding:$margin*2 0;
+}
+.padd-vr-4x{
+    padding:$margin*4 0;
+}
+.padd-hr-2x{
+    padding:0 $margin*2;
+}
+.padd-hr-4x{
+    padding:0 $margin*4;
+}
+.padd-hv{
+    padding:$margin-m $margin;
+}
+.padd-vh{
+    padding:$margin $margin-m;
+}
+.padd-hv-2x{
+    padding:$margin $margin*1.5;
+}
+.padd-vh-2x{
+    padding:$margin*1.5 $margin;
+}
+.align-center{
+    text-align:center;
+}
+.align-ltr,
+.align-ltc,
+.align-left{
+    text-align:left;
+}
+.align-rtl,
+.align-rtc,
+.align-right{
+    text-align:right;
+}
+.pull-left{
+    float:left;
+}
+.pull-right{
+    float:right;
+}
+.pull-center{
+    float:none;
+    margin-left:auto;
+    margin-right:auto;
+}
+.push{
+    margin:$margin;
+}
+.push-m{
+    margin:$margin-m;
+}
+.push-vr{
+    margin:$margin 0;
+}
+.push-vrm{
+    margin:$margin-m 0;
+}
+.push-hr{
+    margin:0 $margin;
+}
+.push-hrm{
+    margin:0 $margin-m;
+}
+.push-left{
+    margin-left:$margin;
+}
+.push-right{
+    margin-right:$margin;
+}
+.push-top{
+    margin-top:$margin;
+}
+.push-bottom{
+    margin-bottom:$margin;
+}
+.hide{
+    display:none;
+}
+.parent-relative{
+    position:relative;
+}
+.pull-left{
+    float:left;
+}
+.pull-right{
+    float:right;
+}
+.pull-center{
+    float:none!important;
+    margin-left:auto;
+    margin-right:auto;
+}
+.gap{
+    &:before{
+        display:block;
+        content:'';
+        height:$hh;
+        width:100%;
+    }
+}
+.m-show-b,
+.m-show{
+    display:none;
+}
+.m-hide{
+    display:initial;
+}
+.b{
+    border:solid 1px red;
+}
+.list-inline{
+    li{
+        display:inline-block;
+        margin:$margin-m;
+    }
+    a{
+        text-decoration:none;
+        color:$c-4;
+    }
+}
+@media all and (min-width:$screen-xxl){
+    .container{
+        width:$screen-fit;
+        margin:0 auto;
+    }
+}
+@media all and (max-width:$screen-l){
+    .container{
+        width:98%;
+        margin:0 auto;
+    }
+}
+@media all and (max-width:$screen-m){
+    
+    .align-rtl{
+        text-align:left;
+    }
+    .align-ltr{
+        text-align:right;
+    }
+    .align-rtc,
+    .align-ltc{
+        text-align:center;
+    }
+    .m-show{
+        display:initial;
+    }
+    .m-show-b{
+        display:block;
+    }
+    .m-hide{
+        display:none;
+    }
+}
+@media all and (max-width:$screen-ml - 2){
+    .m-padd-vr{
+        padding:0 $margin;
+    }
+    .m-padd-hr{
+        padding:$margin 0;
+    }
+}
